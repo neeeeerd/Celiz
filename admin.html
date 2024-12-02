@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VMS Dashboard</title>
+  <link rel="stylesheet" href="admin.css">
+  <script src="script.js"></script>
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+          <div class="logo">
+            <img src="logo1.png" alt="VisitVault logo">
+          </div>
+          <nav>
+            <h3>Menu</h3>
+            <ul class="menu">
+              <li><a href="admin.html" class="active">Dashboard</a></li>
+              <li><a href="visitor.html">Visitor Log</a></li>
+              <li><a href="usermanage.html">User Management</a></li>
+              <li><a href="analytics.html">Reports and Analytics</a></li>
+            </ul>
+            <h3 id="bottom-menu">Others</h3>
+            <ul class="menu">
+              <li><a href="#">Settings</a></li>
+              <li><a href="#">Help & Support</a></li>
+            </ul>
+          </nav>
+        </div>
+      
+        <!-- Main Content -->
+        <main class="main-content">
+          <!-- Header -->
+          <header class="header">
+            <div class="welcome-message">
+                <h1>Dashboard</h1>
+                <p>Welcome back, Wilclar Celiz</p>
+              </div>
+          
+              <div class="profile-section">
+                <div class="profile-image" onclick="toggleDropdown()">
+                  <img src="cat.jpg" alt="Profile Image">
+                </div>
+                <div class="username">
+                  <p>Wilclar Celiz</p>
+                </div>
+                <!-- Dropdown Menu -->
+                <div class="dropdown-menu" id="dropdownMenu">
+                  <ul>
+                    <li><a href="#">View Profile</a></li>
+                    <li><a href="#">Settings</a></li>
+                    <li><a href="home.html">Logout</a></li>
+                  </ul>
+                </div>
+              </div>
+          </header>
+      
+          <!-- Revenue and Info Cards Section -->
+          <section class="revenue-and-cards-container">
+            <div class="revenue-and-cards">
+              <div class="revenue-section">
+                <div class="revenue-info">
+                  <h3>Revenue Overview</h3>
+                  <div class="revenue-breakdown">
+                    <div class="revenue-item">
+                        <h4>Total Revenue</h4>
+                        <p class="amount">$2,850</p>
+                    </div>
+                    <div class="revenue-item growth">
+                        <h4>Revenue Growth</h4>
+                        <p class="amount green">+12%</p>
+                    </div>
+                    <div class="revenue-item">
+                        <h4>Special Events</h4>
+                        <p class="amount">$300</p>
+                    </div>
+                    <div class="revenue-item">
+                        <h4>Corporate Sponsorships</h4>
+                        <p class="amount">$400</p>
+                    </div>
+                    <div class="revenue-item time-period">
+                        <h4>Revenue This Week</h4>
+                        <p class="amount">$1,200</p>
+                    </div>
+                    <div class="revenue-item target">
+                        <h4>Revenue Target</h4>
+                        <p class="amount">$3,000</p>
+                    </div>                   
+                  </div>
+                </div>
+                <button class="btn-report"><a href="analytics.html" style="color: white; text-decoration: none;">View Full Report</a></button>
+              </div>
+            
+              <!-- Info Cards -->
+              <aside class="info-cards">
+                <div class="card">
+                  <h3>Today Visits</h3>
+                  <p id="todayVisits">1</p>
+                </div>
+                <div class="card">
+                  <h3>Today Check-In</h3>
+                  <p id="todayCheckIn">1</p>
+                </div>
+                <div class="card">
+                  <h3>Today Check-Out</h3>
+                  <p id="todayCheckOut">1</p>
+                </div>
+                <div class="card">
+                  <h3>Today Appointment</h3>
+                  <p id="todayAppointment">1</p>
+                </div>
+              </aside>
+            </div>
+          </section>
+      
+          <!-- Visitor Feedback Section -->
+<section class="visitor-feedback">
+    <h2>Visitor Feedback</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Rating</th>
+          <th>Comment</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>John Doe</td>
+          <td>4</td>
+          <td>Great experience!</td>
+        </tr>
+        <tr>
+          <td>Jane Smith</td>
+          <td>5</td>
+          <td>Wonderful staff and exhibits.</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+</body>
+</html>

@@ -1,0 +1,124 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visitor Log</title>
+    <link rel="stylesheet" href="visitor.css">
+    <script src="script.js"></script>
+    </head>
+    <body>
+        <div class="dashboard-container">
+            <!-- Sidebar -->
+            <div class="sidebar">
+            <div class="logo">
+                <img src="logo1.png" alt="VisitVault logo">
+            </div>
+            <nav>
+                <h3>Menu</h3>
+                <ul class="menu">
+                <li><a href="admin.html">Dashboard</a></li>
+                <li><a href="visitor.html" class="active">Visitor Log</a></li>
+                <li><a href="usermanage.html">User Management</a></li>
+                <li><a href="analytics.html">Reports and Analytics</a></li>
+                </ul>
+                <h3 id="bottom-menu">Others</h3>
+                <ul class="menu">
+                <li><a href="#">Settings</a></li>
+                <li><a href="#">Help & Support</a></li>
+                </ul>
+            </nav>
+            </div>
+
+            <main class="main-content">
+                <!-- Header -->
+                <header class="header">
+                    <div class="profile-section">
+                        <div class="profile-image" onclick="toggleDropdown()">
+                            <img src="cat.jpg" alt="Profile Image">
+                        </div>
+                        <div class="username">
+                            <p>Wilclar Celiz</p>
+                        </div>
+                        <!-- Dropdown Menu -->
+                        <div class="dropdown-menu" id="dropdownMenu">
+                            <ul>
+                                <li><a href="#">Settings</a></li>
+                                <li><a href="home.html">Logout</a></li>
+                            </ul>   
+                        </div>
+                    </div>
+                </header>
+            
+                <!-- Visitor Log Section -->
+                <section class="visitor-log-content">
+                    <!-- Visitor Log Overview -->
+                    <div class="visitor-overview">
+                        <div class="stats-card">
+                            <h3>Total Visitors</h3>
+                            <p>1,234</p>
+                        </div>
+                        <div class="stats-card">
+                            <h3>Recent Visitors</h3>
+                            <p>5</p>
+                        </div>
+                        <div class="stats-card">
+                            <h3>Visitor Trends</h3>
+                            <p><strong>Weekly Visits:</strong> 345</p>
+                            <p><strong>Monthly Visits:</strong> 1,234</p>
+                            <p style="color: green; font-size: 13px;"><strong>Status:</strong> Improving (10%)</p>
+                        </div>
+                    </div>
+            
+                    <!-- Visitor Search & Filter -->
+                    <div class="search-filter">
+                        <input type="text" class="search-bar" placeholder="Search by name or visit...">
+                        <div class="filter-options">
+                            <select>
+                                <option value="all">All Visitors</option>
+                                <option value="guest">Guests</option>
+                                <option value="staff">Staff</option>
+                            </select>
+                            <input type="date">
+                        </div>
+                    </div>
+            
+                    <!-- Visitor Log Table -->
+                    <div class="visitor-log-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Visitor Name</th>
+                                    <th>Visit Date</th>
+                                    <th>Purpose</th>
+                                    <th>Host</th>
+                                    <th>Status</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Wilclar</td>
+                                    <td>2024-12-02</td>
+                                    <td>Meeting</td>
+                                    <td>Celiz</td>
+                                    <td>Checked In</td>
+                                    <td><button>Edit</button><button>View</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+            
+                    <!-- Visitor Check-In/Check-Out -->
+                    <div class="check-in-out">
+                        <button class="add-visitor-btn">Add Visitor</button>
+                        <button class="check-in-btn">Check In</button>
+                        <button class="check-out-btn">Check Out</button>
+                    </div>
+                </section>
+            </main>
+            
+            
+        </div>
+    </body>
+    </html>

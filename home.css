@@ -1,0 +1,358 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "SoDo Sans SemiBold", Arial, Helvetica Neue, 
+    Helvetica, Arial, sans-serif;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between; /* Ensures space between logo and navigation */
+    align-items: center;
+    padding: 20px 10%;
+    background-color: #00330f;
+    position: relative; /* Establishes containing block for positioned elements */
+}
+
+.logo {
+    margin-right: auto; /* Pushes the navigation links to the right */
+    position: relative; /* Removes absolute positioning to prevent overlap */
+}
+
+#logo {
+    width: 110px; /* Logo width */
+    height: auto; /* Maintains aspect ratio */
+    padding: 0;
+    margin: 0;
+}
+
+  
+  .nav__links {
+    list-style: none;
+    display: flex;
+  }
+  
+  .nav__links a,
+  .signup,
+  .overlay__content a {
+    font-family: "SoDo Sans SemiBold", Arial, Helvetica Neue, 
+    Helvetica, Arial, sans-serif;
+    font-weight: 750;
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+
+  .signup {
+    margin-left: 20px;
+    padding: 9px 25px;
+    background-color: rgb(197, 142, 23);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+  }
+  
+.search-bar {
+  margin-top: 10px;
+  text-align: right;
+  position: relative;
+  right: 150px;
+  top: 10px;
+  margin: 0;
+}
+
+.search-bar input {
+  width: 300px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  font-size: 14px;
+}
+
+.search-bar button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 60px;
+  background-color: rgb(219, 162, 37);
+  color: white;
+  font-size: 14px;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+}
+
+.search-bar button:hover {
+  background-color: rgb(243, 182, 51);
+  transition: 0.3s ease;
+}
+
+
+  .signup:hover {
+    background-color: rgba(255, 193, 79, 0.8);
+  }
+
+  .nav__links li {
+    padding: 0px 20px;
+  }
+  
+  .nav__links li a {
+    transition: all 0.3s ease 0s;
+  }
+
+  .nav__links li a:hover {
+    color: #d4b34a;
+  }
+
+  /* hero section */
+
+  .hero-text {
+    text-align: center;
+    padding: 80px 20px;
+    color: black;
+}
+
+.hero-text h1 {
+    font-size: 4.1rem;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+  
+  /* Slideshow */
+  
+  .container {
+    padding: 32px; /* Adds spacing around the container */
+}
+
+.slider-wrapper {
+    position: relative; /* Positions child elements relative to this block */
+    max-width: 990px; /* Limits the width of the slider */
+    margin: 0 auto; /* Centers the slider horizontally */
+}
+
+.slider {
+    display: flex; /* Creates a flexible container for slider items */
+    aspect-ratio: 16 / 9; /* Maintains a 16:9 ratio for the slider */
+    overflow-x: auto; /* Enables horizontal scrolling */
+    scroll-snap-type: x mandatory; /* Ensures snapping to each slider item */
+    scroll-behavior: smooth; /* Adds smooth scrolling effect */
+    box-shadow: 0 24px 48px -12px hsla(0, 0%, 0%, 0.25); /* Adds a shadow for depth */
+    border-radius: 8px; /* Rounds the corners of the slider */
+    -ms-overflow-style: none; /* Hides scrollbar for IE and Edge */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.slider::-webkit-scrollbar {
+    display: none; /* Removes the visible scrollbar */
+}
+
+.slider img {
+    flex: 1 0 100%; /* Makes each image take full width of the slider */
+    scroll-snap-align: start; /* Ensures images align at the start of the scroll */
+    object-fit: cover; /* Ensures the image covers the allotted space */
+}
+
+.slider-nav {
+    display: flex; /* Aligns navigation dots in a row */
+    column-gap: 16px; /* Adds spacing between navigation dots */
+    position: absolute; /* Positions dots relative to the slider */
+    bottom: 20px; /* Places dots at the bottom of the slider */
+    left: 50%; /* Centers the navigation dots horizontally */
+    transform: translateX(-50%); /* Adjusts centering for absolute positioning */
+    z-index: 1; /* Places dots above the slider content */
+}
+
+.slider-nav a {
+    width: 8px; /* Sets the width of each navigation dot */
+    height: 8px; /* Sets the height of each navigation dot */
+    border-radius: 50%; /* Makes dots circular */
+    background-color: #fff; /* Sets the dot color to white */
+    opacity: 0.75; /* Makes the dots slightly transparent */
+    transition: opacity ease 250ms; /* Smooth transition for opacity change */
+}
+
+.slider-nav a:hover {
+    opacity: 1; /* Fully opaque when hovered */
+}
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .row h1 {
+    width: 100%;
+    text-align: center;
+    font-size: 3.75em;
+    margin: 0.6em 0;
+    font-weight: 600;
+    color: black;
+    padding: 70px;
+  }
+  .column {
+    padding: 1em;
+    display: inline-block;
+
+  }
+  .features{
+    padding: 20px;
+    padding-top: 60px;
+    
+  }
+  .card {
+    padding: 3.1em 1.25em;
+    text-align: center;
+    background: linear-gradient(0deg, #00330f 10px, transparent 10px);
+    background-repeat: no-repeat;
+    background-position: 0 0.62em;
+    box-shadow: 0 0 2.5em rgba(0, 0, 0, 0.15);
+    border-radius: 0.5em;
+    transition: 0.5s;
+    cursor: pointer;
+    width: 100%; /* Adjust width to fit multiple cards inline */
+    max-width: 300px; /* Optional: limit the max width for responsive design */
+    padding: 3em 2.25em; /* Adjust padding as needed */
+    height: 380px; /* Fixed height for all cards */
+  }
+  .card h3 {
+    font-size: 1.3em;
+    margin: 1em 0 1.4em 0;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    color: #00330f;
+  }
+  .card p {
+    line-height: 2em;
+    color: #625a71;
+    text-justify: inter-word;
+    text-align: justify;
+  }
+  .card:hover {
+    background-position: 0;
+  }
+  .card:hover .icon:before {
+    height: 2.25em;
+    width: 2.25em;
+  }
+
+  .iframe-section {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #fff;
+    margin: 40px auto;
+    max-width: 900px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.iframe-section h2 {
+    font-size: 2rem;
+    color: #00330f;
+    margin-bottom: 20px;
+}
+
+.iframe-section p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.iframe-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.iframe-container iframe {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 400px;
+    height: 250px;
+}
+
+.iframe-container iframe:hover {
+    border-color: #00330f;
+    transition: border-color 0.3s ease;
+}
+
+
+
+/* Footer Styles */
+footer {
+  background-color: #00330f;
+  color: #ddd;
+  padding: 30px 20px;
+  text-align: center;
+  font-size: 1rem;
+  border-top: 2px solid rgb(197, 142, 23);; /* Adds a touch of color at the top */
+}
+
+/* Footer Links */
+footer .footer-links {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+footer .footer-links a {
+  margin: 0 15px;
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+footer .footer-links a:hover {
+  color: rgb(197, 142, 23);;
+}
+
+/* Social Icons */
+footer .social-icons {
+  margin-bottom: 20px;
+}
+
+footer .social-icons a {
+  margin: 0 12px;
+  display: inline-block;
+}
+
+footer .social-icons img {
+  width: 35px; /* Slightly larger icons */
+  height: auto;
+  transition: transform 0.3s ease;
+  border-radius: 10px;
+}
+
+footer .social-icons img:hover {
+  transform: scale(1.2); /* Smooth scaling effect */
+  border: 1px solid white;
+  border-radius: 10px;
+}
+
+/* Footer Text */
+footer p {
+  color: #bbb;
+  font-size: 0.9rem;
+  margin-top: 20px;
+}
+
+footer p a {
+
+  text-decoration: none;
+}
+
+footer p a:hover {
+  text-decoration: underline;
+}
+
+
+
+

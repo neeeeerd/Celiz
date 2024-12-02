@@ -1,0 +1,148 @@
+/* Universal reset for all elements */
+* {
+  box-sizing: border-box; /* Includes padding and border within the element's width and height */
+  margin: 0; /* Removes default margin from all elements */
+  padding: 0; /* Removes default padding from all elements */
+  font-family: "SoDo Sans SemiBold", Arial, Helvetica Neue, 
+    Helvetica, Arial, sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-between; /* Ensures space between logo and navigation */
+  align-items: center;
+  padding: 20px 10%;
+  background-color: #00330f;
+  position: relative; /* Establishes containing block for positioned elements */
+}
+
+.logo {
+  margin-right: auto; /* Pushes the navigation links to the right */
+  position: relative; /* Removes absolute positioning to prevent overlap */
+}
+
+#logo {
+  width: 110px; /* Logo width */
+  height: auto; /* Maintains aspect ratio */
+  padding: 0;
+  margin: 0;
+}
+
+/* Navigation links styling */
+.nav__links {
+  list-style: none; /* Removes default list styling */
+  display: flex; /* Uses Flexbox to arrange the list items horizontally */
+}
+
+/* Navigation link styling */
+.nav__links a,
+.signup,
+.overlay__content a {
+    font-weight: 550;
+    color: #edf0f1;
+    text-decoration: none;
+  }
+
+  .signup {
+    margin-left: 20px;
+    padding: 9px 25px;
+    background-color: rgb(197, 136, 23);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+  }
+
+/* Navigation link item styling */
+.nav__links li {
+  padding: 0px 20px; /* Adds 20px horizontal padding to list items */
+}
+
+/* Navigation link hover effect */
+.nav__links li a {
+  transition: all 0.3s ease 0s; /* Smooth transition effect when hovering */
+}
+
+/* Navigation link hover effect */
+.nav__links li a:hover {
+  color: #d4b34a; /* Changes color to gold on hover */
+}
+
+/* Gallery container styling */
+.gallery-container {
+  padding: 15px 9%; /* Adds padding around the container */
+  padding-bottom: 100px; /* Adds additional bottom padding */
+  font-family: "Montserrat", sans-serif;
+  font-weight: 550;
+  padding-top: 40px;
+}
+
+/* Gallery heading styling */
+.gallery-container .heading {
+  text-align: center; /* Centers the text horizontally */
+  padding-bottom: 15px; /* Adds bottom padding */
+  color: black; /* Sets text color to black */
+  font-size: 40px; /* Sets font size to 40px */
+  padding-top: 40px; /* Adds top padding */
+}
+
+/* Styling for the grid of gallery items */
+.gallery-container .box-container {
+  display: grid; /* Uses grid layout to arrange items */
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); /* Automatically adjusts columns based on available width */
+  gap: 15px; /* Adds 15px gap between items */
+}
+
+/* Styling for each gallery box */
+.gallery-container .box-container .box {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, .2); /* Adds subtle shadow around the box */
+  border-radius: 5px; /* Rounds the corners of the box */
+  background: #fff; /* Sets background color to white */
+  text-align: center; /* Centers text inside the box */
+  padding: 30px 20px; /* Adds padding inside the box */
+}
+
+/* Styling for images inside the gallery box */
+.gallery-container .box-container .box img {
+  height: 80px; /* Sets a fixed height for images */
+}
+
+/* Styling for the box heading (h3) */
+.gallery-container .box-container .box h3 {
+  color: #444; /* Sets heading text color to dark gray */
+  font-size: 22px; /* Sets font size to 22px */
+  padding: 10px 0; /* Adds padding above and below the heading */
+}
+
+/* Styling for the paragraph text inside the gallery box */
+.gallery-container .box-container .box p {
+  color: #777; /* Sets text color to a lighter gray */
+  font-size: 15px; /* Sets font size to 15px */
+  line-height: 1.8; /* Sets line height for readability */
+}
+
+/* Styling for the button inside the gallery box */
+.gallery-container .box-container .box .btn {
+  margin-top: 10px; /* Adds top margin */
+  display: inline-block; /* Makes the button an inline-block element */
+  background-color: #00330f; /* Sets button background color */
+  color: #fff; /* Sets text color to white */
+  font-size: 17px; /* Sets font size to 17px */
+  border-radius: 5px; /* Rounds the button's corners */
+  padding: 8px 25px; /* Adds padding inside the button */
+  text-decoration: none;
+}
+
+/* Button hover effect */
+.gallery-container .box-container .box .btn:hover {
+  background-color: #036621; /* Sets button background color */
+  transition: 0.3s ease;
+}
+
+/* Gallery box hover effect */
+.gallery-container .box-container .box:hover {
+  box-shadow: 0 10px 15px rgba(0, 0, 0, .3); /* Adds a stronger shadow on hover */
+  transform: scale(1.03); /* Slightly enlarges the box */
+  transition: 0.3s ease;
+
+}

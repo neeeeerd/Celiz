@@ -1,0 +1,343 @@
+* {
+    font-family: "SoDo Sans SemiBold", Arial, Helvetica Neue, Helvetica, Arial, sans-serif; 
+}
+
+body {
+    margin: 0;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+.dashboard-container {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    background-color: #00330f;
+    color: white;
+    width: 250px;
+    padding: 20px;
+    min-height: 160vh;
+    display: flex;
+    flex-direction: column;
+    border-top-right-radius: 40px;
+}
+
+.sidebar .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.sidebar .logo img {
+    width: 50%;
+    max-width: 120px;
+    padding-top: 40px;
+}
+
+.sidebar nav h3 {
+    padding: 5px;
+    padding-left: 0;
+}
+
+.sidebar nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar nav ul.menu li {
+    margin: 25px 0;
+}
+
+.sidebar nav ul.menu li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px;
+    border-radius: 8px;
+    display: block;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.sidebar nav ul.menu li a:hover,
+.sidebar nav ul.menu li a.active {
+    background-color: #005524;
+    transform: scale(1.05);
+}
+
+.main-content {
+    flex: 1;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.profile-section {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    position: relative;
+}
+
+.profile-image img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.username p {
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 160px;
+    z-index: 10;
+}
+
+.dropdown-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown-menu ul li {
+    padding: 10px;
+    text-align: center;
+}
+
+.dropdown-menu ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    font-weight: 600;
+    display: block;
+}
+
+.dropdown-menu ul li a:hover {
+    background-color: #f1f1f1;
+    border-radius: 5px;
+}
+
+.profile-section.show-dropdown .dropdown-menu {
+    display: block;
+}
+
+#bottom-menu {
+    padding-top: 50px;
+}
+
+.header .btn-report {
+    padding: 10px 20px;
+    background-color: #005524;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.header .btn-report:hover {
+    background-color: #007a39;
+}
+
+.welcome-message h1 {
+    font-size: 40px;
+}
+
+
+
+.revenue-and-cards {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+}
+
+.revenue-section {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    min-height: 30.5rem;
+    flex: 1;
+}
+
+.revenue-section .btn-report {
+    padding: 10px 20px;
+    background-color: #005524;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    position: relative;
+    right: 20px;
+    top: 20px;
+}
+
+.revenue-section .btn-report:hover {
+    background-color: #007a39;
+}
+
+.revenue-breakdown {
+    margin-top: 86px;
+    position: relative;
+    left: 50px;
+    bottom: 20px;
+    display: block;
+}
+
+.revenue-section .revenue-info .revenue-breakdown {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+}
+
+.revenue-section .revenue-info .revenue-item {
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    padding: 10px;
+    height: 100%;
+    width: 100%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.revenue-section .revenue-info .revenue-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.revenue-section .revenue-info .revenue-item h4 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.revenue-section .revenue-info .revenue-item .amount {
+    font-size: 22px;
+    font-weight: bold;
+    color: #007a39;
+    margin-top: 10px;
+}
+
+.revenue-section .revenue-info .revenue-item .amount.green {
+    color: #28a745;
+}
+
+.revenue-section .revenue-info .revenue-item .amount.red {
+    color: #dc3545;
+}
+
+.revenue-section .revenue-info h3 {
+    font-size: 23px;
+    color: #333;
+    margin-left: 30px;
+    margin-bottom: 20px;
+}
+
+.info-cards {
+    width: 190px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px;
+    position: relative;
+    top: -14px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.info-cards .card {
+    background-color: #007a39;
+    color: white;
+    padding: 15px;
+    border-radius: 14px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.info-cards .card h3 {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.info-cards .card p {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.visitor-feedback {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding-top: 0;
+    flex: 1;
+    margin-right: 15px;
+    margin-top: -28px;
+}
+
+.visitor-feedback h2 {
+    margin-bottom: 20px;
+    font-size: 22px;
+}
+
+.visitor-feedback table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.visitor-feedback table th,
+.visitor-feedback table td {
+    text-align: left;
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+.visitor-feedback table th {
+    font-size: 16px;
+    color: #555;
+    text-transform: uppercase;
+}
+
+.visitor-feedback table td {
+    font-size: 14px;
+    color: #333;
+}
+
+section {
+    margin-bottom: 20px;
+}

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="usermanagement.css">
+    <script src="script.js"></script>
+    <title>User Management</title>
+</head>
+<body>
+
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="logo">
+                <img src="logo1.png" alt="VisitVault logo">
+            </div>
+            <nav>
+                <h3>Menu</h3>
+                <ul class="menu">
+                    <li><a href="admin.html">Dashboard</a></li>
+                    <li><a href="visitor.html">Visitor Log</a></li>
+                    <li><a href="usermanage.html" class="active">User Management</a></li>
+                    <li><a href="analytics.html">Reports and Analytics</a></li>
+                </ul>
+                <h3 id="bottom-menu">Others</h3>
+                <ul class="menu">
+                    <li><a href="#">Settings</a></li>
+                    <li><a href="#">Help & Support</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Header -->
+            <header class="header">
+                <div class="profile-section">
+                    <div class="profile-image" onclick="toggleDropdown()">
+                        <img src="cat.jpg" alt="Profile Image">
+                    </div>
+                    <div class="username">
+                        <p>Wilclar Celiz</p>
+                    </div>
+                    <!-- Dropdown Menu -->
+                    <div class="dropdown-menu" id="dropdownMenu">
+                        <ul>
+                            <li><a href="#">View Profile</a></li>
+                            <li><a href="#">Settings</a></li>
+                            <li><a href="home.html">Logout</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </header>
+
+            <!-- User Management Content -->
+            <section class="user-management-content">
+                <div class="section-header">
+                    <h2>User Management</h2>
+                    <button class="add-user-btn">Add User</button>
+                </div>
+
+                <!-- User Table -->
+                <div class="user-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Username</th>
+                                <th>Email</th>
+                                <th>Role</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Wilclar Celiz</td>
+                                <td>clarceliz2006@gmail.com</td>
+                                <td>Admin</td>
+                                <td>Active</td>
+                                <td>
+                                    <button>Edit</button>
+                                    <button>Delete</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Wilclar Celiz</td>
+                                <td>clarceliz2006@gmail.com</td>
+                                <td>Admin</td>
+                                <td>Active</td>
+                                <td>
+                                    <button>Edit</button>
+                                    <button>Delete</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Wilclar Celiz</td>
+                                <td>clarceliz2006@gmail.com</td>
+                                <td>Admin</td>
+                                <td>Active</td>
+                                <td>
+                                    <button>Edit</button>
+                                    <button>Delete</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Wilclar Celiz</td>
+                                <td>clarceliz2006@gmail.com</td>
+                                <td>Admin</td>
+                                <td>Active</td>
+                                <td>
+                                    <button>Edit</button>
+                                    <button>Delete</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Wilclar Celiz</td>
+                                <td>clarceliz2006@gmail.com</td>
+                                <td>Admin</td>
+                                <td>Active</td>
+                                <td>
+                                    <button>Edit</button>
+                                    <button>Delete</button>
+                                </td>
+                            </tr>
+                            <!-- More rows as needed -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

@@ -1,0 +1,281 @@
+* {
+    font-family: "SoDo Sans SemiBold", Arial, Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+body {
+    margin: 0;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+.dashboard-container {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    background-color: #00330f;
+    color: white;
+    width: 250px;
+    padding: 20px;
+    min-height: 160vh;
+    display: flex;
+    flex-direction: column;
+    border-top-right-radius: 40px;
+}
+
+.sidebar .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.sidebar .logo img {
+    width: 50%;
+    max-width: 120px;
+    padding-top: 40px;
+}
+
+.sidebar nav h3 {
+    padding: 5px;
+    padding-left: 0;
+}
+
+.sidebar nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar nav ul.menu li {
+    margin: 25px 0;
+}
+
+.sidebar nav ul.menu li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px;
+    border-radius: 8px;
+    display: block;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.sidebar nav ul.menu li a:hover,
+.sidebar nav ul.menu li a.active {
+    background-color: #005524;
+    transform: scale(1.05);
+}
+
+.main-content {
+    flex: 1;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.header {
+    display: flex;
+    justify-content: flex-end; /* Aligns the profile section to the right */
+    align-items: center;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.profile-section {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    position: relative;
+}
+
+.profile-image img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.username p {
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 160px;
+    z-index: 10;
+}
+
+.dropdown-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown-menu ul li {
+    padding: 10px;
+    text-align: center;
+}
+
+.dropdown-menu ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    font-weight: 600;
+    display: block;
+}
+
+.dropdown-menu ul li a:hover {
+    background-color: #f1f1f1;
+    border-radius: 5px;
+}
+
+.profile-section.show-dropdown .dropdown-menu {
+    display: block;
+}
+
+#bottom-menu {
+    padding-top: 50px;
+}
+
+/* Visitor log */
+
+.visitor-log-content {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.visitor-overview {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.visitor-overview {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: flex-start; /* Aligns cards to the top */
+}
+
+.stats-card {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Specific widths for cards */
+.stats-card:nth-child(1),
+.stats-card:nth-child(2) {
+    flex: 1; /* Make these smaller */
+    max-width: 20%; /* Restrict maximum size */
+}
+
+.stats-card:nth-child(3) {
+    flex: 2; /* Make this wider */
+    max-width: 60%; /* Allow more width */
+}
+
+.stats-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.stats-card p {
+    font-size: 1.5rem; /* Adjusted for consistency */
+    font-weight: bold;
+}
+
+
+.search-filter {
+    display: flex;
+    gap: 20px;
+    justify-content: flex-start;
+}
+
+.search-bar {
+    padding: 10px;
+    border-radius: 8px;
+    width: 300px;
+    border: 1px solid #ddd;
+}
+
+.filter-options {
+    display: flex;
+    gap: 10px;
+}
+
+.filter-options select,
+.filter-options input {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.visitor-log-table table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.visitor-log-table th,
+.visitor-log-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+
+.check-in-out {
+    display: flex;
+    gap: 20px;
+    justify-content: flex-start;
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: none;
+    background-color: #00330f;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #005524;
+}
+
+.add-visitor-btn {
+    background-color: #c58e17;
+}
+
+.check-in-btn {
+    background-color: #007b00;
+}
+
+.check-out-btn {
+    background-color: #d32f2f;
+}

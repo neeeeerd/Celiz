@@ -1,0 +1,181 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "SoDo Sans SemiBold", Arial, Helvetica Neue, 
+    Helvetica, Arial, sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-between; /* Ensures space between logo and navigation */
+  align-items: center;
+  padding: 20px 10%;
+  background-color: #00330f;
+  position: relative; /* Establishes containing block for positioned elements */
+}
+
+.logo {
+  margin-right: auto; /* Pushes the navigation links to the right */
+  position: relative; /* Removes absolute positioning to prevent overlap */
+}
+
+#logo {
+  width: 110px; /* Logo width */
+  height: auto; /* Maintains aspect ratio */
+  padding: 0;
+  margin: 0;
+}
+
+.nav__links {
+  list-style: none;
+  display: flex;
+}
+
+.nav__links a,
+.signup,
+.overlay__content a {
+  color: white;
+  text-decoration: none;
+}
+
+.signup {
+  margin-left: 20px;
+  padding: 9px 25px;
+  background-color: rgb(197, 142, 23);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+.signup:hover {
+  background-color: rgba(255, 193, 79, 0.8);
+}
+
+.nav__links li {
+  padding: 0px 20px;
+}
+
+.nav__links li a {
+  transition: all 0.3s ease 0s;
+}
+
+.nav__links li a:hover {
+  color: #d4b34a;
+}
+
+  .form{
+    position: absolute;
+    top: 30%;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .form .form-header{
+    display: grid;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  .form .form-header h2{
+    font-size: 36px;
+    color: black;
+  }
+
+  .form .form-header p{
+    font-size: 15px;
+    color: grey;
+    width: 100%;
+  }
+
+
+
+.container {
+  background-color: #fff;
+  border-radius: 30px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+  width: 400px;
+  max-width: 100%;
+  min-height: 480px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin: auto;
+  margin-top: 20px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.container p {
+  font-size: 12px;
+  line-height: 20px;
+  letter-spacing: 0.3px;
+  margin: 20px 0;
+}
+
+.container a {
+  color: #333;
+  font-size: 12px;
+  text-decoration: none;
+  margin: 15px 0 10px;
+}
+
+.container a:hover{
+  color: #036d23;
+}
+
+.container button {
+  background-color: #00330f;
+  color: #fff;
+  font-size: 12px;
+  padding: 10px 45px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.container button:hover{
+  background-color: #036d23;
+  transition: 0.5s ease;
+}
+
+.container form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  width: 100%;
+}
+
+.container input {
+  background-color: #eee;
+  border: none;
+  margin: 8px 0;
+  padding: 10px 15px;
+  font-size: 13px;
+  border-radius: 8px;
+  width: 70%;
+  min-width: 50px;
+  outline: none;
+}
+
+.social-icons {
+  margin: 20px 0;
+}
+
+.social-icons a {
+  border: 1px solid black;
+  border-radius: 20%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 3px;
+  width: 40px;
+  height: 40px;
+}

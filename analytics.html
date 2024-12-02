@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="analytics.css">
+    <script src="script.js"></script>
+    <title>Reports and Analytics</title>
+</head>
+<body>
+
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="logo">
+                <img src="logo1.png" alt="VisitVault logo">
+            </div>
+            <nav>
+                <h3>Menu</h3>
+                <ul class="menu">
+                    <li><a href="admin.html">Dashboard</a></li>
+                    <li><a href="visitor.html">Visitor Log</a></li>
+                    <li><a href="usermanage.html">User Management</a></li>
+                    <li><a href="analytics.html" class="active">Reports and Analytics</a></li>
+                </ul>
+                <h3 id="bottom-menu">Others</h3>
+                <ul class="menu">
+                    <li><a href="#">Settings</a></li>
+                    <li><a href="#">Help & Support</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Header -->
+            <header class="header">
+                <div class="profile-section">
+                    <div class="profile-image" onclick="toggleDropdown()">
+                        <img src="cat.jpg" alt="Profile Image">
+                    </div>
+                    <div class="username">
+                        <p>Wilclar Celiz</p>
+                    </div>
+                    <!-- Dropdown Menu -->
+                    <div class="dropdown-menu" id="dropdownMenu">
+                        <ul>
+                            <li><a href="#">View Profile</a></li>
+                            <li><a href="#">Settings</a></li>
+                            <li><a href="home.html">Logout</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </header>
+
+            <div class="analytics-content">
+                <div class="section-header">
+                    <h2>Reports and Analytics</h2>
+                </div>
+            
+                <!-- Analytics Summary -->
+                <div class="analytics-summary">
+                    <div class="card">
+                        <h3>Total Visitors</h3>
+                        <p>12,345</p>
+                    </div>
+                    <div class="card">
+                        <h3>Unique Visitors</h3>
+                        <p>8,765</p>
+                    </div>
+                    <div class="card">
+                        <h3>Total Revenue</h3>
+                        <p>$45,678</p>
+                    </div>
+                </div>
+            
+                <!-- Visitor Trends Table -->
+                <div class="visitor-trends">
+                    <h3>Visitor Trends (Last 7 Days)</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Day</th>
+                                <th>Total Visitors</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Monday</td>
+                                <td>1,234</td>
+                            </tr>
+                            <tr>
+                                <td>Tuesday</td>
+                                <td>1,567</td>
+                            </tr>
+                            <tr>
+                                <td>Wednesday</td>
+                                <td>1,890</td>
+                            </tr>
+                            <tr>
+                                <td>Thursday</td>
+                                <td>1,654</td>
+                            </tr>
+                            <tr>
+                                <td>Friday</td>
+                                <td>2,123</td>
+                            </tr>
+                            <tr>
+                                <td>Saturday</td>
+                                <td>3,456</td>
+                            </tr>
+                            <tr>
+                                <td>Sunday</td>
+                                <td>2,998</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            
+                <!-- Revenue Overview -->
+                <div class="revenue-overview">
+                    <h3>Revenue Overview</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Day</th>
+                                <th>Revenue</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Monday</td>
+                                <td>$4,500</td>
+                            </tr>
+                            <tr>
+                                <td>Tuesday</td>
+                                <td>$5,200</td>
+                            </tr>
+                            <tr>
+                                <td>Wednesday</td>
+                                <td>$6,300</td>
+                            </tr>
+                            <tr>
+                                <td>Thursday</td>
+                                <td>$5,700</td>
+                            </tr>
+                            <tr>
+                                <td>Friday</td>
+                                <td>$7,200</td>
+                            </tr>
+                            <tr>
+                                <td>Saturday</td>
+                                <td>$10,000</td>
+                            </tr>
+                            <tr>
+                                <td>Sunday</td>
+                                <td>$9,778</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+</main>
+</div>
+</body>
+</html>            
